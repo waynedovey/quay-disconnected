@@ -78,6 +78,7 @@ $ oc new-project quay-enterprise
 }
 ```
 
+* Edit Deployment **quay-operator** and change the **Update Strategy** to **Recreate**
 * replace Deployment **quay-operator** 
 
 ```image: registry.redhat.io/quay/quay-rhel8-operator@sha256:xxxx```
