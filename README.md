@@ -24,7 +24,7 @@ imageContentSources:
 
 ### imageContentSourcePolicy.yaml update 
 
-# New Image source
+### New Image source
 
 ### mapping.txt
 
