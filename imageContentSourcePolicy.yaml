@@ -1,3 +1,12 @@
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  name: redhat-operators
+spec:
+  repositoryDigestMirrors:  
+  - mirrors:
+    - registry.ocp4.gsslab.brq.redhat.com:443/quay/quay-rhel8-operator
+    source: registry.redhat.io/quay/quay-rhel8-operator  
   - mirrors:
     - registry.ocp4.gsslab.brq.redhat.com:443/rhel8/redis-5
     source: registry.redhat.io/rhel8/redis-5
