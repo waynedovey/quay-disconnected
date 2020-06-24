@@ -70,7 +70,7 @@ $ oc new-project quay-enterprise
 {
 	"auths": {
 		"registry.ocp4.gsslab.brq.redhat.com:443": {
-			"auth": "cmVnaXN0cnk6cmVnaXN0cnk="
+			"auth": "xxxx"
 		}
 	}
 }
