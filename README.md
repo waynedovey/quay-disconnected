@@ -76,7 +76,7 @@ $ oc new-project quay-enterprise
 }
 ```
 
-* replace Deployment image: registry.redhat.io/quay/quay-rhel8-operator@sha256:xxxx with image: registry.redhat.io/quay/quay-rhel8-operator@sha256:cdcd009fd9796522d4037d591a48be054ee3a91c563ac214e4ed8b365d2475be
+* replace replicasets image: registry.redhat.io/quay/quay-rhel8-operator@sha256:xxxx with image: registry.redhat.io/quay/quay-rhel8-operator@sha256:cdcd009fd9796522d4037d591a48be054ee3a91c563ac214e4ed8b365d2475be
 
 ```
 $ wget https://raw.githubusercontent.com/waynedovey/quay-disconnected/master/example-quayecosystem.yaml
