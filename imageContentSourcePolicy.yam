@@ -1,0 +1,9 @@
+  - mirrors:
+    - registry.ocp4.gsslab.brq.redhat.com:443/rhel8/redis-5
+    source: registry.redhat.io/rhel8/redis-5
+  - mirrors:
+    - registry.ocp4.gsslab.brq.redhat.com:443/rhel8/postgresql-96
+    source: registry.redhat.io/rhel8/postgresql-96
+  - mirrors:
+    - registry.ocp4.gsslab.brq.redhat.com:443/redhat/quay
+    source: quay.io/redhat/quay
