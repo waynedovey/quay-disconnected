@@ -42,6 +42,7 @@ $ wget https://raw.githubusercontent.com/waynedovey/quay-disconnected/master/Ima
 $ chmod +x Image-Upload.sh
 $ ./Image-Upload.sh
 $ oc apply -f ./redhat-operators-manifests
+
 $ cat << EOF >postinstall/catalogsource.yaml
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
@@ -54,6 +55,7 @@ spec:
   displayName: My Red Hat Operator Catalog
   publisher: grpc
 EOF
+
 $ oc create -f postinstall/catalogsource.yaml
 ```
 
