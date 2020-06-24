@@ -1,5 +1,8 @@
 
 #!/bin/bash
+# Quay Operator
+
+skopeo copy docker://registry.redhat.io/quay/quay-rhel8-operator@sha256:855743b29f8e050fb1f124b47f622b9e179998df60ad9465b51553f1c729197d docker://registry.ocp4.gsslab.brq.redhat.com:443/quay/quay-rhel8-operator
 
 # Postgresql Image
 
