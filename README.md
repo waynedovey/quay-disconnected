@@ -64,7 +64,18 @@ $ oc create -f postinstall/catalogsource.yaml
 $ oc new-project quay-enterprise
 ```
 * Deploy Quay Operator from UI
+
 * Ensure the redhat-pull-secret Image Pull Secret is created 
+```
+{
+	"auths": {
+		"registry.ocp4.gsslab.brq.redhat.com:443": {
+			"auth": "cmVnaXN0cnk6cmVnaXN0cnk="
+		}
+	}
+}
+```
+
 ```
 $ oc get deployment quay-operator -n quay-enterprise -o yaml > quay-operator.yaml
 ```
