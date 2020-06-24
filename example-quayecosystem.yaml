@@ -1,0 +1,87 @@
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: QuayEcosystem
+metadata:
+  name: example-quayecosystem
+spec:
+  quay:
+    imagePullSecretName: redhat-pull-secret
+    keepConfigDeployment: true
+    externalAccess:
+      tls:
+        termination: edge
+  clair:
+    enabled: false
+
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: QuayEcosystem
+metadata:
+  finalizers:
+  - quayecosystem.redhatcop.redhat.io
+  generation: 2
+  name: example-quayecosystem
+  namespace: quay-enterprise
+spec:
+  clair:
+    resources: {}
+  quay:
+    configResources: {}
+    database:
+      deploymentStrategy: RollingUpdate
+      image: registry.redhat.io/rhel8/postgresql-96@sha256:297daa50a57d0378caae22186cb4e53a2b4037dafc71c206c661210f38afa6ed
+      livenessProbe:
+        exec:
+          command:
+          - /usr/libexec/check-container
+          - --live
+        failureThreshold: 3
+        initialDelaySeconds: 120
+        timeoutSeconds: 10
+      readinessProbe:
+        exec:
+          command:
+          - /usr/libexec/check-container
+        failureThreshold: 3
+        initialDelaySeconds: 10
+        timeoutSeconds: 1
+      resources: {}
+    deploymentStrategy: RollingUpdate
+    externalAccess:
+      tls:
+        termination: edge
+      type: Route
+    image: quay.io/redhat/quay@sha256:2218711b5d34b1f68ebeeb71fca76546acb9625ef8f1ad493e8dd6a8e89b9838
+    imagePullSecretName: redhat-pull-secret
+    keepConfigDeployment: true
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /health/instance
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 120
+      timeoutSeconds: 5
+    migrationPhase: new-installation
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /health/instance
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 5
+    registryBackends:
+    - local:
+        storagePath: /datastorage/registry
+      name: default
+    repoMirrorResources: {}
+    resources: {}
+    superusers:
+    - quay
+  redis:
+    deploymentStrategy: RollingUpdate
+    image: registry.redhat.io/rhel8/redis-5@sha256:c1552f7934393b786a56d22fdddeb8cdeaefdfa81fa012c53efdf7a4933e9d61
+    readinessProbe:
+      failureThreshold: 3
+      initialDelaySeconds: 30
+      tcpSocket:
+        port: 6379
+    resources: {}
