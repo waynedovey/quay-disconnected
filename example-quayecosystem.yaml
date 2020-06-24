@@ -27,7 +27,7 @@ spec:
     configResources: {}
     database:
       deploymentStrategy: RollingUpdate
-      image: registry.redhat.io/rhel8/postgresql-96@sha256:297daa50a57d0378caae22186cb4e53a2b4037dafc71c206c661210f38afa6ed
+      image: registry.redhat.io/rhel8/postgresql-96@sha256:8efe7a62494ebd5af2fbf0343fb70de113091600b8b1f02e243c10de28797262
       livenessProbe:
         exec:
           command:
