@@ -5,7 +5,7 @@
 * Run the ./disconnected-sync.sh script to update the offline registry
 * Build the offline cluster with the Disconnected settings and certs 
 
-*Example:*
+**Example:**
 
 ```
 additionalTrustBundle: |
