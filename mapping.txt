@@ -1,0 +1,4 @@
+registry.redhat.io/quay/quay-rhel8-operator@sha256:855743b29f8e050fb1f124b47f622b9e179998df60ad9465b51553f1c729197d=registry.ocp4.gsslab.brq.redhat.com:443/quay/quay-rhel8-operator
+registry.redhat.io/rhel8/postgresql-96@sha256:297daa50a57d0378caae22186cb4e53a2b4037dafc71c206c661210f38afa6ed=registry.ocp4.gsslab.brq.redhat.com:443/rhel8/postgresql-96
+registry.redhat.io/rhel8/redis-5@sha256:c1552f7934393b786a56d22fdddeb8cdeaefdfa81fa012c53efdf7a4933e9d61=registry.ocp4.gsslab.brq.redhat.com:443/rhel8/redis-5
+quay.io/redhat/quay@sha256:2218711b5d34b1f68ebeeb71fca76546acb9625ef8f1ad493e8dd6a8e89b9838=registry.ocp4.gsslab.brq.redhat.com:443/redhat/quay
