@@ -62,7 +62,16 @@ $ oc create -f postinstall/catalogsource.yaml
 
 ```
 $ oc new-project quay-enterprise
+```
 * Deploy Quay Operator from UI
+* Ensure the redhat-pull-secret Image Pull Secret is created 
+```
+$ oc get deployment quay-operator -n quay-enterprise -o yaml > quay-operator.yaml
+```
+* replace quay-operator.yaml image: registry.redhat.io/quay/quay-rhel8-operator@sha256:xxxx with image: registry.redhat.io/quay/quay-rhel8-operator@sha256:cdcd009fd9796522d4037d591a48be054ee3a91c563ac214e4ed8b365d2475be
+```
+$ oc delete Deployment quay-operator
+$ oc apply -f quay-operator.yaml
 $ wget https://raw.githubusercontent.com/waynedovey/quay-disconnected/master/example-quayecosystem.yaml
 $ oc apply -f example-quayecosystem.yaml -n quay-enterprise
 ```
