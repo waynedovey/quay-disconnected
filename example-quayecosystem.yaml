@@ -49,6 +49,7 @@ spec:
       tls:
         termination: edge
       type: Route
+      # hostname: quay.apps.<basedomain>
     image: quay.io/redhat/quay@sha256:2218711b5d34b1f68ebeeb71fca76546acb9625ef8f1ad493e8dd6a8e89b9838
     imagePullSecretName: redhat-pull-secret
     keepConfigDeployment: true
